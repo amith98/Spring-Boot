@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<h1 th:text="${movieTitle}"></h1>
+		<h3 th:text="${movieFirstLine}"></h3>
+		<div th:if="${isLoggedIn}">
+			<p th:text="${movieDescription}"></p>
+		</div>
+		<div th:if="${!isLoggedIn}">
+			<p><u>Please log in to read the full movie description</u></p>
+		</div>
+	</body>
+</html>
