@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+		
+<table border="1" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price(&#x20B9;)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="product:${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
