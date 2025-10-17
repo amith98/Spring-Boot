@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+		
+<table border="1" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="student:${students}">
+            <td th:text="${student.rollNumber}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.marks}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
