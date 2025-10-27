@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Student List</title>
+</head>
+<body>
+<h1>Student List</h1>
+<form action="#" th:action="@{/all}" method="get">
+    <input type="text" name="keyword" placeholder="Search by name" />
+    <input type="submit" value="Search" />
+</form>
+<table border="1" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Standard</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="school : ${schoolList}">
+            <td th:text="${school.id}"></td>
+            <td th:text="${school.name}"></td>
+            <td th:text="${school.standard}"></td>
+            <td th:text="${school.age}"></td>
+            <td>
+                <a th:href="@{/update/{id}(id=${school.id})}">Edit</a>
+                <a th:href="@{/delete/{id}(id=${school.id})}">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
