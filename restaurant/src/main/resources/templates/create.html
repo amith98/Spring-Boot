@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Dish</title>
+</head>
+<body>
+  <h1>Create Dish</h1>
+  <p th:text="${message}"></p>
+  <form action="#" th:action="@{/create}" method="post">
+    <label>Dish Name:</label>
+    <input type="text" name="dishName" required /><br/>
+    <label>Price:</label>
+    <input type="text" name="price" required /><br/>
+    <input type="submit" value="Create" />
+  </form>
+</body>
+</html>

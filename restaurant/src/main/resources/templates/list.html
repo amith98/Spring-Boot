@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dish List</title>
+</head>
+<body>
+<h1>Dish List</h1>
+<table border="1" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Dish</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="dishIt : ${dishDetailList}">
+            <td th:text="${dishIt.id}"></td>
+            <td th:text="${dishIt.dishName}"></td>
+            <td th:text="${dishIt.price}"></td>
+			<td>
+			 <!----<a th:href="@{/dish/{dishName}(dishName=${dishIt.dishName})/{price}}">Share</a>-->
+			 <!-- Thymeleaft pipe syntax used to create url-->
+			  <a th:href="@{|/dish/${dishIt.dishName}/${dishIt.price}|}">Share</a>
+		 </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
