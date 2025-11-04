@@ -6,5 +6,9 @@
 		<p>Description: <span th:text="${description}"></span></p>
 		<p>Price: <span th:text="${price}"></span></p>
 		<p>Published Date: <span th:text="${publishedDate}"></span></p>
+		
+		<form th:action="@{/generate-book-pdf}" method="get">
+		    <button type="submit">Download PDF</button>
+		</form>
 	</body>
 </html>
