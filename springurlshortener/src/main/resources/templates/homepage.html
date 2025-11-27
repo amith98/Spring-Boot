@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<p>Welcome <span th:text="${user}"></span></p>
+		<form th:action="@{/check}" method="get">
+				      <button type="submit">Add URL</button>
+		</form><br>
+		<div th:if="${checkMessage}">
+			<p th:text="${checkMessage}"></p>
+		</div>
+		<form th:action="@{/listall}" method="get">
+				      <button type="submit">View URLs</button>
+		</form><br>
+		
+		<form th:action="@{/logout}" method="get">
+		      <button type="submit">Logout</button>
+		 </form>
+	</body>
+</html>

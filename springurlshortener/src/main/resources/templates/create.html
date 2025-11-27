@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add URL</title>
+</head>
+<body>
+  <h1>Add URL</h1>
+  <p th:text="${message}"></p>
+  <form action="#" th:action="@{/create}" method="post">
+    <label>Title:</label>
+    <input type="text" name="title" required/><br/>
+    <label>Long URL:</label>
+    <input type="text" name="longurl" required/><br/>
+    <input type="submit" value="Create" />
+  </form><br>
+  <form th:action="@{/homepage}" method="get">
+  		      <button type="submit">Homepage</button>
+   </form>
+</body>
+</html>
